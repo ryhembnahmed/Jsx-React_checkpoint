@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import ProfilePhoto from "./Component/Profile/ProfilePhoto";
+import FullName from "./Component/Profile/FullName";
+import Address from "./Component/Profile/Address";
+import Email from "./Component/Profile/Email";
+
+const center = {
+  position: "absolute",
+  left: "50%",
+  top: "50%",
+  transform: "translate(-50%, -50%)",
+  border: "5px solid #9cd3d3",
+  padding: "10px",
+  borderRadius: '25px',
+  boxShadow: '12px 12px 2px 1px #eef2e2'
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={center}>
+      <ProfilePhoto />
+      <FullName />
+      <Address />
+      <Email/>
     </div>
   );
 }
